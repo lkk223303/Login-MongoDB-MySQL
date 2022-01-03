@@ -1,0 +1,59 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ffa8;
+}
+
+#reg-form,
+#direct {
+  width: 300px;
+  margin: 0 auto;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+h1 {
+  text-align: center;
+  color: #4d4d4d;
+  font-size: 24px;
+  padding: 20px 0 20px 0;
+}
+
+p {
+  text-align: center;
+  color: #000000;
+  font-size: 14px;
+  padding: 20px 0 20px 0;
+}
+#reg-form input[type="password"],
+#reg-form input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #dddddd;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+#reg-form input[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  background-color: #4b6361;
+  border: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 5px auto;
+}
+#reg-form button,
+#direct button {
+  width: 100%;
+  padding: 15px;
+  background-color: #4b6361;
+  border: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 5px auto;
+}

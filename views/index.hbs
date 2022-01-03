@@ -1,0 +1,68 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+<form id="reg-form" >
+  <input type="text" id="username" placeholder="Username" />
+  <input type="password" id="password" placeholder="password" />
+  <input type="submit" value="Submit Form"></input>
+  <button type="submit" value="Login" name="loginButton" id="loginButton">Login</button>
+</form>
+<form id="direct" action="/direct" method="GET">
+    <button type="submit" >直接登入前須先login</button>
+</form>
+
+<script>
+  const form = document.getElementById('reg-form');
+  const loginBtn = document.getElementById('loginButton');
+
+  form.addEventListener('submit',registerUser) 
+  loginBtn.addEventListener('click',loginUser) 
+
+
+  async function registerUser(event){
+    event.preventDefault() 
+    const username = document.getElementById('username').value
+    const password = document.getElementById('password').value
+
+    // register api
+    const result = await fetch('/api/register',{
+        method:'POST',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify({username,password})
+    }).then((res)=>res.json())
+    console.log(result)
+}
+
+async function loginUser(event){
+    event.preventDefault() 
+    const username = document.getElementById('username').value
+    const password = document.getElementById('password').value
+
+
+    // login api
+    const result = await fetch('/login',{
+        method:'POST',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify({username,password})
+    }).then((res)=>res.json())
+    
+
+}
+
+{{!-- async function directUser(event){
+    event.preventDefault() 
+
+    // direct login api and check login
+    const result = await fetch('/direct',{
+        method:'GET',
+        headers:{
+
+        },
+    });
+    console.log(result)
+} --}}
+
+</script>

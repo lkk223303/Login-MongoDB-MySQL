@@ -1,0 +1,3 @@
+# 忽略.env檔案
+.env
+node_modules
