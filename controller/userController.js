@@ -77,3 +77,13 @@ exports.user_direct = (req, res) => {
     }
   });
 };
+
+exports.user_findAll = async (req, res) => {
+  User.find({}, function (err, users) {
+    var userMap = {};
+    users.forEach(function (user) {
+      userMap[user._id] = user;
+    });
+    res.send(userMap);
+  });
+};

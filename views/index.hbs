@@ -18,7 +18,7 @@
   loginBtn.addEventListener('click',loginUser) 
 
 
-  async function registerUser(event){
+async function registerUser(event){
     event.preventDefault() 
     const username = document.getElementById('username').value
     const password = document.getElementById('password').value
@@ -33,6 +33,7 @@
     }).then((res)=>res.json())
     console.log(result)
 }
+
 
 async function loginUser(event){
     event.preventDefault() 

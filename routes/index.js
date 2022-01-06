@@ -17,4 +17,6 @@ router.post("/login", user_controller.user_login);
 // User direct login, auth if user has token auth-token cookie
 router.get("/direct", verify, user_controller.user_direct);
 
+router.get("/usersList", user_controller.user_findAll);
+
 module.exports = router;
